@@ -9,12 +9,12 @@ window.app('a,b,c')
 //window.a={},window.b={},window.c={}
 ~~~
 ~~~
-;function(root){
+;(function(root){
  
  function entry(str){
   for(const k of (str||'').split(',').filter(d=>d))
    root[k]={}
  }
  root.app=entry;
-}(this);
+})(this);
 ~~~
